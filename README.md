@@ -1,1 +1,122 @@
-# Portfolio
+# Portfolio<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shushant Tiwari Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    html { scroll-behavior: smooth; }
+    body { margin:0; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color:#f4f6f8; color:#333; line-height:1.6; }
+    a { text-decoration:none; color:inherit; }
+
+    header { background: linear-gradient(135deg,#4CAF50,#2196F3); color:white; text-align:center; padding:80px 20px 40px 20px; }
+    header img { width:150px; height:150px; border-radius:50%; border:4px solid white; object-fit:cover; margin-bottom:20px; }
+    header h1 { margin:0; font-size:2.5rem; }
+    header p { font-size:1.1rem; margin-top:10px; }
+    .social-icons { margin-top:15px; }
+    .social-icons a { color:white; margin:0 10px; font-size:1.5rem; transition: color 0.3s; }
+    .social-icons a:hover { color:#FFC107; }
+
+    nav { display:flex; justify-content:center; gap:20px; margin:20px 0; }
+    nav a { font-weight:bold; color:#4CAF50; transition:color 0.3s; }
+    nav a:hover { color:#2196F3; }
+
+    section { max-width:900px; margin:20px auto; padding:30px; background-color:white; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    section:hover { transform: translateY(-2px); }
+    section h2 { color:#2196F3; margin-bottom:15px; border-bottom:2px solid #4CAF50; display:inline-block; padding-bottom:5px; }
+    ul { list-style-type:none; padding-left:0; }
+    ul li { background-color:#e8f0fe; margin:8px 0; padding:10px 15px; border-left:5px solid #4CAF50; border-radius:5px; transition: background-color 0.3s; }
+    ul li:hover { background-color:#d0e4ff; }
+
+    .skills { display:flex; flex-wrap:wrap; gap:10px; }
+    .skill { background-color:#4CAF50; color:white; padding:8px 12px; border-radius:20px; font-size:0.9rem; transition: background-color 0.3s; }
+    .skill:hover { background-color:#2196F3; }
+
+    form input, form textarea { width:100%; padding:12px; margin:10px 0; border-radius:5px; border:1px solid #ccc; font-size:1rem; }
+    form button { background-color:#4CAF50; color:white; padding:12px 20px; border:none; border-radius:5px; cursor:pointer; font-size:1rem; transition:background-color 0.3s; }
+    form button:hover { background-color:#2196F3; }
+    #formMessage { margin-top:10px; font-weight:bold; color:green; }
+
+    footer { text-align:center; padding:20px; background-color:#333; color:white; margin-top:20px; }
+    @media(max-width:600px){ header h1{ font-size:2rem; } .skills{ justify-content:center; } header img{ width:120px; height:120px; } }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="https://d8it4huxumps7.cloudfront.net/uploads/profile/68bd8287af682.png" alt="Shushant Tiwari Photo">
+    <h1>Shushant Tiwari</h1>
+    <p>Hi, I’m Shushant Tiwari. I bridge technology and people for impact.</p>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/shushant-tiwari-1b8119364/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Shushant-556" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://x.com/Shushant_556" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I’m Shushant Tiwari. I believe technology is more than just code — it’s a way to change lives, connect people, and create opportunities.</p>
+    <p>Right now, I’m pursuing my B.Tech in Computer Science and Engineering at IILM University, where I hold a 9.3 CGPA. But my real education has come from curiosity — exploring Artificial Intelligence, Data Science, Cybersecurity, and Blockchain. That curiosity led me to certifications from Oracle, TATA, and Harvard, each one opening a new door.</p>
+    <p>Along the way, I discovered something powerful: technology matters, but people matter more. As a Campus Ambassador at IIT DELHI RENDEZVOUS, I learned how to engage and inspire. At Noxalgo, I turned research into insights. With the She Can Foundation, I saw how even small contributions can create real social impact.</p>
+    <p>What drives me is simple — to be a bridge between technology and people. Whether it’s representing a brand, building a community, or leading a project, I bring energy, curiosity, and a vision for impact.</p>
+    <p>"Because at the end of the day, innovation is not just about machines — it’s about people. And I want to be part of that story."</p>
+</section>
+
+<section id="certificates">
+    <h2>Certificates</h2>
+    <ul>
+        <li><a href="https://www.life-global.org/certificate/b895d947-6562-41eb-863e-627394b50dcd" target="_blank">HP LIFE AI Learning</a></li>
+        <li><a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=21A64F571F2BFCFA130C9E7101996AD367CC3CD870DD7A15D2920BCFE2C97CD3" target="_blank">Oracle Generative AI Professional</a></li>
+        <li><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_68b91d026c83572f4f33ee7e_1756963157836_completion_certificate.pdf" target="_blank">TATA - GenAI Powered Data Analytics Job Simulation</a></li>
+        <li><a href="https://skillsoft.digitalbadges.skillsoft.com/13d20bee-8f5b-4818-8f93-aeca8e8078e4#acc.gAJz5lmL" target="_blank">Exploring Blockchain</a></li>
+        <li><a href="https://www.credly.com/badges/30df72c7-4725-4f49-b0cf-003e7d9cbf4f/whatsapp" target="_blank">Introduction to Data Science</a></li>
+        <li><a href="https://drive.google.com/file/d/1oIF-yiPkYHfAwjYQqc_TeWJvdYP8rmUD/view?usp=drivesdk" target="_blank">Harvard University X Intro to CS</a></li>
+        <li><a href="https://drive.google.com/file/d/1oUmzjh0AgPS9kT8h6aPeDG2UlJ63r6g3/view?usp=drivesdk" target="_blank">TATA - Cyber Security Analyst</a></li>
+    </ul>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">Artificial Intelligence</div>
+        <div class="skill">Data Science</div>
+        <div class="skill">Cybersecurity</div>
+        <div class="skill">Blockchain</div>
+        <div class="skill">Python</div>
+        <div class="skill">Java</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Team Leadership</div>
+        <div class="skill">Communication</div>
+        <div class="skill">Project Management</div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone Number" value="+919798107584" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <p>Email: <a href="mailto:shushanttiwari2036@gmail.com">shushanttiwari2036@gmail.com</a></p>
+    <p>Phone: +91 9798107584</p>
+</section>
+
+<footer>
+    &copy; 2025 Shushant Tiwari. All rights reserved.
+</footer>
+
+</body>
+</html>
