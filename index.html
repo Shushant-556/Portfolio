@@ -1,209 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shushant Tiwari — AI Systems & Full-Stack Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shushant Tiwari — Developer | Engineer | Technology Enthusiast</title>
+  <meta name="description" content="Cinematic 3D developer portfolio of Shushant Tiwari — BTech Computer Science and Engineering undergraduate at IILM University, Greater Noida (CGPA 9.30/10). Showcasing AI, distributed systems, full-stack, and WebGL engineering projects.">
+  <meta name="author" content="Shushant Tiwari">
+  <meta name="theme-color" content="#090A0C">
+  <link rel="canonical" href="https://shushant-556.github.io/Portfolio/">
+
+  <!-- Open Graph & Social Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shushant Tiwari — Cinematic 3D Developer Portfolio">
+  <meta property="og:description" content="Developer | Engineer | Technology Enthusiast — AI systems, decentralized architectures, full-stack engineering, and WebGL experiences.">
+  <meta property="og:url" content="https://shushant-556.github.io/Portfolio/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Shushant Tiwari — Developer | Engineer | Technology Enthusiast">
+  <meta name="twitter:description" content="Portfolio of Shushant Tiwari (BTech CSE, IILM University, Greater Noida).">
+
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+
+  <!-- Art-Directed Typography: Space Grotesk, Inter, IBM Plex Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Modular Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Shushant Tiwari",
+      "jobTitle": "Computer Science & Engineering Student / Software Developer",
+      "url": "https://shushant-556.github.io/Portfolio/",
+      "email": "mailto:shushanttiwari2036@gmail.com",
+      "telephone": "+919798107584",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Greater Noida",
+        "addressRegion": "Delhi NCR",
+        "addressCountry": "IN"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "IILM University, Greater Noida"
+      },
+      "sameAs": [
+        "https://github.com/Shushant-556",
+        "https://linkedin.com/in/shushant-tiwari"
+      ]
+    }
+  </script>
 </head>
 <body>
-  <!-- Preloader -->
-  <div id="preloader">
-    <div class="preloader-top">
-      <span>Shushant Tiwari</span>
-      <span id="preloader-pct">0%</span>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Real-Readiness Preloader (Never Traps Users, Zero Fake Percentages) -->
+  <div id="preloader" class="preloader" role="status" aria-live="polite">
+    <div class="meta-label">SHUSHANT TIWARI // PORTFOLIO ENGINE</div>
+    <div class="preloader__center">
+      <div class="preloader__wordmark">SHUSHANT TIWARI</div>
+      <div id="preloader-status" class="preloader__status">INITIALIZING 3D STAGE &amp; TYPOGRAPHY...</div>
+      <div class="preloader__bar" aria-hidden="true">
+        <div class="preloader__bar-fill"></div>
+      </div>
     </div>
-    <div class="preloader-center">AI Systems & Engineering</div>
-    <div class="preloader-bar-wrap">
-      <div class="preloader-bar"></div>
-    </div>
+    <div class="meta-label">GREATER NOIDA / DELHI NCR, INDIA</div>
   </div>
 
-  <!-- Custom Cursor -->
-  <div id="cursor-dot"></div>
-  <div id="cursor-reticle"></div>
+  <!-- Top Scroll Progress Indicator -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div id="scroll-progress-bar" class="scroll-progress__bar"></div>
+  </div>
 
-  <!-- Interactive Three.js GLSL WebGL Backdrop -->
-  <canvas id="webgl-canvas"></canvas>
+  <!-- Persistent Fixed 3D Storytelling Canvas -->
+  <div class="webgl-stage" aria-hidden="true">
+    <canvas id="scene-canvas"></canvas>
+  </div>
+  <div class="stage-vignette" aria-hidden="true"></div>
 
-  <div class="site-wrapper">
-    <!-- Navigation -->
-    <header class="top-nav">
-      <div class="container nav-inner">
-        <a href="#top" class="brand" data-interactive="true">
-          <span class="brand-mark"></span>
-          <span>Shushant Tiwari</span>
-        </a>
-        <nav class="nav-links">
-          <a href="#work" data-interactive="true">Work</a>
-          <a href="#experience" data-interactive="true">Experience</a>
-          <a href="#skills" data-interactive="true">Skills</a>
-          <a href="#education" data-interactive="true">Education</a>
-          <a href="#contact" data-interactive="true">Contact</a>
-        </nav>
+  <!-- Progressive-Enhancement Custom Cursor -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true"></div>
+  <div id="custom-cursor-ring" class="custom-cursor-ring" aria-hidden="true"></div>
+
+  <!-- Primary Navigation Header -->
+  <header class="site-header" role="banner">
+    <div class="container site-header__inner">
+      <a href="#hero" class="brand-mark" aria-label="Shushant Tiwari Home">
+        <span class="brand-mark__monogram" aria-hidden="true">ST</span>
+        <span>SHUSHANT TIWARI</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary Navigation">
+        <a href="#hero" class="nav-link is-active">01 Hero</a>
+        <a href="#about" class="nav-link">02 About</a>
+        <a href="#projects" class="nav-link">03 Projects</a>
+        <a href="#skills" class="nav-link">04 Skills</a>
+        <a href="#experience" class="nav-link">05 Experience</a>
+        <a href="#education" class="nav-link">06 Education</a>
+        <a href="#certifications" class="nav-link">07 Certs</a>
+        <a href="#contact" class="nav-link">08 Contact</a>
+      </nav>
+
+      <div class="header-controls">
+        <button type="button" id="sound-toggle" class="sound-toggle" aria-pressed="false" aria-label="Toggle subtle UI interaction sound">
+          <span class="sound-toggle__bars" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span class="sound-toggle__label">Audio Off</span>
+        </button>
+
+        <button type="button" id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="mobile-drawer">
+          Menu
+        </button>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- Hero -->
-    <section id="top" class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <h1 class="hero-title hero-stagger">
-            Engineering <span class="accent">AI Systems</span> & Full-Stack Software
+  <!-- Mobile Fullscreen Navigation Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true" role="dialog" aria-label="Mobile Navigation">
+    <nav aria-label="Mobile Section Links">
+      <ul class="mobile-drawer__list">
+        <li><a href="#hero" class="mobile-drawer__link"><span class="mobile-drawer__num">01</span><span>Hero</span></a></li>
+        <li><a href="#about" class="mobile-drawer__link"><span class="mobile-drawer__num">02</span><span>About</span></a></li>
+        <li><a href="#projects" class="mobile-drawer__link"><span class="mobile-drawer__num">03</span><span>Selected Projects</span></a></li>
+        <li><a href="#skills" class="mobile-drawer__link"><span class="mobile-drawer__num">04</span><span>Technical Expertise</span></a></li>
+        <li><a href="#experience" class="mobile-drawer__link"><span class="mobile-drawer__num">05</span><span>Experience</span></a></li>
+        <li><a href="#education" class="mobile-drawer__link"><span class="mobile-drawer__num">06</span><span>Education</span></a></li>
+        <li><a href="#certifications" class="mobile-drawer__link"><span class="mobile-drawer__num">07</span><span>Certifications</span></a></li>
+        <li><a href="#contact" class="mobile-drawer__link"><span class="mobile-drawer__num">08</span><span>Contact</span></a></li>
+      </ul>
+    </nav>
+    <div class="meta-label">GREATER NOIDA / DELHI NCR, INDIA &mdash; +91 9798107584</div>
+  </div>
+
+  <!-- Floating Desktop Section Indicator Rail -->
+  <aside class="section-rail" aria-label="Section Quick Jump">
+    <button type="button" class="section-rail__dot is-active" data-target="hero" aria-label="Jump to Hero"></button>
+    <button type="button" class="section-rail__dot" data-target="about" aria-label="Jump to About"></button>
+    <button type="button" class="section-rail__dot" data-target="projects" aria-label="Jump to Projects"></button>
+    <button type="button" class="section-rail__dot" data-target="skills" aria-label="Jump to Skills"></button>
+    <button type="button" class="section-rail__dot" data-target="experience" aria-label="Jump to Experience"></button>
+    <button type="button" class="section-rail__dot" data-target="education" aria-label="Jump to Education"></button>
+    <button type="button" class="section-rail__dot" data-target="certifications" aria-label="Jump to Certifications"></button>
+    <button type="button" class="section-rail__dot" data-target="contact" aria-label="Jump to Contact"></button>
+  </aside>
+
+  <!-- Main 8-Section Experience -->
+  <main id="main-content" class="site-main">
+
+    <!-- ================================================================
+         SECTION 01 — CINEMATIC HERO
+         ================================================================ -->
+    <section id="hero" class="section section--hero" aria-labelledby="hero-heading">
+      <div class="container hero-grid">
+        <div class="hero-identity">
+          <div class="eyebrow hero-stagger">01 // SPATIAL ENGINEERING PORTFOLIO</div>
+
+          <h1 id="hero-heading" class="hero-title">
+            <span class="line-mask"><span class="line-inner">SHUSHANT</span></span>
+            <span class="line-mask"><span class="line-inner">TIWARI</span></span>
           </h1>
-          <p class="hero-lead hero-stagger">
-            Computer Science & Engineering undergraduate at IILM University in Greater Noida.
-            Building real-time audio AI pipelines, encrypted decentralized EHR architectures,
-            and production Python backends.
+
+          <p class="hero-subtitle hero-stagger">
+            Developer | Engineer | Technology Enthusiast
           </p>
 
-          <div class="hero-metrics hero-stagger">
-            <div class="metric-block">
-              <div class="metric-value">9.30</div>
-              <div class="metric-label">B.Tech CSE CGPA</div>
-            </div>
-            <div class="metric-block">
-              <div class="metric-value">Grade O</div>
-              <div class="metric-label">AICTE DevOps Intern</div>
-            </div>
-            <div class="metric-block">
-              <div class="metric-value">8+</div>
-              <div class="metric-label">Verified Credentials</div>
-            </div>
-          </div>
-
-          <div class="action-row hero-stagger">
-            <a href="#work" class="btn btn-primary" data-interactive="true">Explore Selected Work</a>
-            <a href="https://github.com/Shushant-556" target="_blank" rel="noreferrer" class="btn btn-surface" data-interactive="true">GitHub</a>
-            <a href="https://linkedin.com/in/shushant-tiwari" target="_blank" rel="noreferrer" class="btn btn-surface" data-interactive="true">LinkedIn</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Kinetic Marquee -->
-    <div class="marquee-band" aria-hidden="true">
-      <div class="marquee-track">
-        <span>Real-Time Audio AI</span>
-        <span>Python Backends</span>
-        <span>Encrypted EHR on IPFS</span>
-        <span>Machine Learning Pipelines</span>
-        <span>Docker & CI/CD</span>
-        <span>Oracle Cloud GenAI Pro</span>
-        <span>Real-Time Audio AI</span>
-        <span>Python Backends</span>
-        <span>Encrypted EHR on IPFS</span>
-        <span>Machine Learning Pipelines</span>
-        <span>Docker & CI/CD</span>
-        <span>Oracle Cloud GenAI Pro</span>
-      </div>
-    </div>
-
-    <!-- Selected Work -->
-    <section id="work" class="section">
-      <div class="container">
-        <div class="section-header scroll-reveal">
-          <h2 class="section-title">Selected Work</h2>
-          <p class="section-note">Production systems across real-time AI, decentralized security, and predictive ML</p>
-        </div>
-        <div id="projects-list" class="projects-list"></div>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" class="section">
-      <div class="container">
-        <div class="section-header scroll-reveal">
-          <h2 class="section-title">Experience</h2>
-          <p class="section-note">Accredited industrial internships and campus leadership</p>
-        </div>
-        <div id="experience-list" class="two-col-stack"></div>
-      </div>
-    </section>
-
-    <!-- Technical Skills -->
-    <section id="skills" class="section">
-      <div class="container">
-        <div class="section-header scroll-reveal">
-          <h2 class="section-title">Technical Stack</h2>
-          <p class="section-note">Core languages, AI tooling, full-stack frameworks, and cloud systems</p>
-        </div>
-        <div id="skills-grid" class="skills-grid"></div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education" class="section">
-      <div class="container">
-        <div class="section-header scroll-reveal">
-          <h2 class="section-title">Education</h2>
-          <p class="section-note">Academic foundation in computer science and applied statistics</p>
-        </div>
-        <div id="education-list" class="two-col-stack"></div>
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section id="certifications" class="section">
-      <div class="container">
-        <div class="section-header scroll-reveal">
-          <h2 class="section-title">Certifications</h2>
-          <p class="section-note">Verified industry credentials across cloud, AI, data science, and blockchain</p>
-        </div>
-        <div id="certs-grid" class="certs-grid"></div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="contact-panel scroll-reveal">
-          <h2 class="contact-heading">Let's build reliable AI and backend systems</h2>
-          <p class="contact-copy">
-            Available for AI Engineering, LLM Systems, and Full-Stack Software roles.
+          <p class="body-copy hero-stagger">
+            Computer Science &amp; Engineering undergraduate at IILM University, Greater Noida,
+            engineering applied AI systems, encrypted decentralized architectures, and
+            interactive web software.
           </p>
-          <div class="contact-details">
-            <span>Greater Noida / Delhi NCR, India</span>
-            <span>+91 9798107584</span>
-            <span>shushanttiwari2036@gmail.com</span>
+
+          <div class="hero-actions hero-stagger">
+            <a href="#projects" class="btn btn--primary magnetic">
+              Explore Selected Work
+              <span aria-hidden="true">&darr;</span>
+            </a>
+            <a href="#contact" class="btn btn--secondary magnetic">
+              Initiate Contact
+              <span aria-hidden="true">&rarr;</span>
+            </a>
           </div>
-          <div class="action-row">
-            <a href="mailto:shushanttiwari2036@gmail.com" class="btn btn-primary" data-interactive="true">Email Shushant</a>
-            <a href="https://linkedin.com/in/shushant-tiwari" target="_blank" rel="noreferrer" class="btn btn-surface" style="background-color: var(--bg-canvas);" data-interactive="true">LinkedIn</a>
-            <a href="https://github.com/Shushant-556" target="_blank" rel="noreferrer" class="btn btn-surface" style="background-color: var(--bg-canvas);" data-interactive="true">GitHub</a>
+        </div>
+
+        <aside class="hero-telemetry hero-stagger" aria-label="System & Academic Overview">
+          <div class="hero-telemetry__row">
+            <span class="hero-telemetry__key">Location</span>
+            <span class="hero-telemetry__val">Greater Noida / Delhi NCR</span>
+          </div>
+          <div class="hero-telemetry__row">
+            <span class="hero-telemetry__key">Academic</span>
+            <span class="hero-telemetry__val">BTech CSE &bull; 9.30 / 10</span>
+          </div>
+          <div class="hero-telemetry__row">
+            <span class="hero-telemetry__key">Portfolio</span>
+            <span class="hero-telemetry__val">05 Engineered Systems</span>
+          </div>
+          <div class="hero-telemetry__row">
+            <span class="hero-telemetry__key">3D Narrative</span>
+            <span id="scene-narrative-indicator" class="hero-telemetry__val">01 // COMPLETE METALLIC SCULPTURE</span>
+          </div>
+          <div class="hero-telemetry__row">
+            <span class="hero-telemetry__key">Render Mode</span>
+            <span id="render-mode-indicator" class="hero-telemetry__val render-mode-badge">INITIALIZING</span>
+          </div>
+        </aside>
+      </div>
+
+      <div class="container hero-footer hero-stagger">
+        <a href="#about" class="scroll-cue">
+          <span class="scroll-cue__line" aria-hidden="true"></span>
+          <span>Scroll to Deconstruct Sculpture</span>
+        </a>
+        <div class="meta-label">MONOCHROME EDITION // 2026</div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 02 — ABOUT / ENGINEERING PHILOSOPHY
+         ================================================================ -->
+    <section id="about" class="section section--quiet" aria-labelledby="about-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <div class="section-header__meta">
+            <span class="eyebrow">02 // ENGINEERING PHILOSOPHY</span>
+            <h2 id="about-heading" class="section-heading">Systems First.<br>Craft Without Noise.</h2>
+          </div>
+          <p class="section-header__narrative">
+            3D STATE // SCULPTURE SEPARATES INTO ORBITAL COMPONENTS
+          </p>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-philosophy reveal">
+            <p class="editorial-lead">
+              I build software where architectural rigor meets tangible human utility — from local-first AI audio pipelines to zero-plaintext cryptographic health platforms.
+            </p>
+            <p class="body-copy">
+              As a BTech Computer Science and Engineering student at IILM University, Greater Noida, my engineering curiosity sits at the intersection of artificial intelligence, distributed systems, cloud automation, and real-time browser graphics.
+            </p>
+            <p class="body-copy">
+              My problem-solving philosophy prioritizes clarity over bloat: understand the underlying constraints (latency, privacy, memory footprint, or verification guarantees), design clean modular boundaries, and test honestly rather than hiding behind superficial abstractions.
+            </p>
+
+            <div class="about-pillars">
+              <div class="pillar-cell">
+                <span class="meta-label">FOCUS 01</span>
+                <h3 style="font-size:1.1rem; margin-top:0.25rem;">Applied AI &amp; Local Pipelines</h3>
+                <p class="body-copy" style="font-size:var(--text-sm);">Real-time speech transcription, LLM tooling, and environmental time-series modelling.</p>
+              </div>
+              <div class="pillar-cell">
+                <span class="meta-label">FOCUS 02</span>
+                <h3 style="font-size:1.1rem; margin-top:0.25rem;">Security &amp; Decentralization</h3>
+                <p class="body-copy" style="font-size:var(--text-sm);">Client-side WebCrypto encryption, IPFS content addressing, and EVM auditability.</p>
+              </div>
+              <div class="pillar-cell">
+                <span class="meta-label">FOCUS 03</span>
+                <h3 style="font-size:1.1rem; margin-top:0.25rem;">Automation &amp; Cloud Tooling</h3>
+                <p class="body-copy" style="font-size:var(--text-sm);">FastAPI backends, Docker Compose workflows, and CI/CD pipelines via GitHub Actions.</p>
+              </div>
+              <div class="pillar-cell">
+                <span class="meta-label">FOCUS 04</span>
+                <h3 style="font-size:1.1rem; margin-top:0.25rem;">Spatial Web &amp; Interfaces</h3>
+                <p class="body-copy" style="font-size:var(--text-sm);">WebGL rendering, interactive visualizations, and accessible high-contrast UI systems.</p>
+              </div>
+            </div>
+          </div>
+
+          <aside class="about-facts reveal" aria-label="Verified Academic Snapshot">
+            <div class="fact-row">
+              <span class="meta-label">Degree Program</span>
+              <span class="fact-row__value">BTech Computer Science &amp; Engineering</span>
+            </div>
+            <div class="fact-row">
+              <span class="meta-label">Institution</span>
+              <span class="fact-row__value">IILM University, Greater Noida</span>
+            </div>
+            <div class="fact-row">
+              <span class="meta-label">Cumulative GPA</span>
+              <span class="fact-row__value">9.30 / 10</span>
+            </div>
+            <div class="fact-row">
+              <span class="meta-label">Portfolio Systems</span>
+              <span class="fact-row__value">Five Distinct Projects</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 03 — SELECTED PROJECTS (5 DISTINCT WORLDS)
+         ================================================================ -->
+    <section id="projects" class="section section--editorial" aria-labelledby="projects-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <div class="section-header__meta">
+            <span class="eyebrow">03 // SELECTED PROJECTS</span>
+            <h2 id="projects-heading" class="section-heading">Five Interactive<br>Digital Worlds.</h2>
+          </div>
+          <p class="section-header__narrative">
+            3D STATE // COMPONENTS ALIGN INTO FIVE PROJECT NODES
+          </p>
+        </header>
+
+        <div id="projects-container" class="projects-stack" aria-live="polite">
+          <!-- Populated dynamically by js/components/projects-ui.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 04 — TECHNICAL EXPERTISE ECOSYSTEM
+         ================================================================ -->
+    <section id="skills" class="section section--quiet" aria-labelledby="skills-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <div class="section-header__meta">
+            <span class="eyebrow">04 // TECHNICAL EXPERTISE</span>
+            <h2 id="skills-heading" class="section-heading">Connected<br>Engineering Graph.</h2>
+          </div>
+          <p class="section-header__narrative">
+            3D STATE // NODES FORM A TECHNICAL CONSTELLATION
+          </p>
+        </header>
+
+        <div id="skills-filters" class="skills-filters reveal" role="group" aria-label="Filter skills by category">
+          <!-- Populated by js/components/skills-network.js -->
+        </div>
+
+        <div class="skills-layout reveal">
+          <div class="skills-stage">
+            <canvas
+              id="skills-canvas"
+              role="img"
+              aria-label="Interactive spatial network graph of Shushant Tiwari's technical skills across six engineering domains"
+            ></canvas>
+          </div>
+
+          <aside class="skills-inspector" aria-live="polite">
+            <span class="meta-label">DOMAIN INSPECTOR</span>
+            <h3 id="skills-inspector-title" class="section-subheading" style="font-size:1.55rem;">
+              Full Technical Ecosystem
+            </h3>
+            <p id="skills-inspector-desc" class="body-copy" style="font-size:var(--text-sm);"></p>
+            <div id="skills-inspector-list"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 05 — EXPERIENCE TIMELINE
+         ================================================================ -->
+    <section id="experience" class="section section--editorial" aria-labelledby="experience-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <div class="section-header__meta">
+            <span class="eyebrow">05 // EXPERIENCE</span>
+            <h2 id="experience-heading" class="section-heading">Internships &amp;<br>Campus Leadership.</h2>
+          </div>
+          <p class="section-header__narrative">
+            3D STATE // NETWORK ALIGNS INTO CHRONOLOGICAL SPINE
+          </p>
+        </header>
+
+        <div class="timeline">
+          <div class="timeline__rail" aria-hidden="true">
+            <div id="timeline-progress" class="timeline__progress"></div>
+          </div>
+          <div id="experience-list" style="display:flex; flex-direction:column; gap:2rem;">
+            <!-- Populated by js/main.js -->
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="container site-footer">
-      <span>Shushant Tiwari — Greater Noida, India</span>
-      <span>shushant-556.github.io/Portfolio</span>
-    </footer>
-  </div>
+    <!-- ================================================================
+         SECTION 06 — EDUCATION
+         ================================================================ -->
+    <section id="education" class="section section--quiet" aria-labelledby="education-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <div class="section-header__meta">
+            <span class="eyebrow">06 // EDUCATION</span>
+            <h2 id="education-heading" class="section-heading">Academic<br>Foundation.</h2>
+          </div>
+          <p class="section-header__narrative">
+            3D STATE // COMPOSITION BECOMES ARCHITECTURAL LATTICE
+          </p>
+        </header>
 
-  <!-- Case Study Drawer -->
-  <div id="drawer-backdrop" role="dialog" aria-modal="true">
-    <div class="drawer-content">
-      <div class="drawer-top">
-        <span class="font-mono" style="color: var(--accent-red-bright);">Case Study</span>
-        <button id="drawer-close" class="drawer-close" data-interactive="true">Close</button>
+        <div id="education-grid" class="education-grid">
+          <!-- Populated by js/main.js -->
+        </div>
       </div>
-      <div id="drawer-body"></div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 07 — CERTIFICATIONS GALLERY
+         ================================================================ -->
+    <section id="certifications" class="section section--editorial" aria-labelledby="certifications-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <div class="section-header__meta">
+            <span class="eyebrow">07 // CERTIFICATIONS</span>
+            <h2 id="certifications-heading" class="section-heading">Verified<br>Credentials.</h2>
+          </div>
+          <p class="section-header__narrative">
+            3D STATE // ELEMENTS ARRAY INTO CREDENTIAL GALLERY
+          </p>
+        </header>
+
+        <div id="certifications-grid" class="certs-grid">
+          <!-- Populated by js/main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 08 — CONTACT FINALE
+         ================================================================ -->
+    <section id="contact" class="section section--contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <div class="section-header__meta">
+            <span class="eyebrow">08 // CONTACT</span>
+            <h2 id="contact-heading" class="section-heading">Let&rsquo;s Build<br>Something Rigorous.</h2>
+          </div>
+          <p class="section-header__narrative">
+            3D STATE // SCULPTURE REASSEMBLES INTO FINAL FORM
+          </p>
+        </header>
+
+        <div class="contact-grid reveal">
+          <div>
+            <p class="editorial-lead">
+              Open to software engineering internships, AI systems research, full-stack product engineering, and technical collaborations.
+            </p>
+            <div class="hero-actions" style="margin-top:2rem;">
+              <a href="mailto:shushanttiwari2036@gmail.com" class="btn btn--primary magnetic">
+                Send Email Directly &rarr;
+              </a>
+              <button type="button" id="copy-email-btn" class="btn btn--secondary magnetic">
+                Copy Email Address
+              </button>
+            </div>
+          </div>
+
+          <div class="contact-links" aria-label="Direct Contact Channels">
+            <a href="mailto:shushanttiwari2036@gmail.com" class="contact-row">
+              <span class="contact-row__label">Email</span>
+              <span class="contact-row__value">shushanttiwari2036@gmail.com</span>
+            </a>
+            <a href="tel:+919798107584" class="contact-row">
+              <span class="contact-row__label">Phone</span>
+              <span class="contact-row__value">+91 9798107584</span>
+            </a>
+            <a href="https://github.com/Shushant-556" target="_blank" rel="noopener noreferrer" class="contact-row">
+              <span class="contact-row__label">GitHub</span>
+              <span class="contact-row__value">github.com/Shushant-556 &#8599;</span>
+            </a>
+            <a href="https://linkedin.com/in/shushant-tiwari" target="_blank" rel="noopener noreferrer" class="contact-row">
+              <span class="contact-row__label">LinkedIn</span>
+              <span class="contact-row__value">linkedin.com/in/shushant-tiwari &#8599;</span>
+            </a>
+            <a href="https://shushant-556.github.io/Portfolio" target="_blank" rel="noopener noreferrer" class="contact-row">
+              <span class="contact-row__label">Portfolio</span>
+              <span class="contact-row__value">shushant-556.github.io/Portfolio &#8599;</span>
+            </a>
+            <div class="contact-row" style="cursor:default;">
+              <span class="contact-row__label">Location</span>
+              <span class="contact-row__value">Greater Noida / Delhi NCR, India</span>
+            </div>
+          </div>
+        </div>
+
+        <footer class="site-footer" role="contentinfo">
+          <div>&copy; 2026 Shushant Tiwari. Built with Vanilla JS, Three.js, GLSL &amp; GSAP.</div>
+          <button type="button" id="back-to-top" class="btn btn--ghost magnetic">
+            Back to Top &uarr;
+          </button>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- Accessible Project Detail Case Study Modal -->
+  <div
+    id="project-modal"
+    class="modal-backdrop"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-project-title"
+    aria-hidden="true"
+  >
+    <div id="project-modal-panel" class="modal-panel" tabindex="-1">
+      <div id="project-modal-content"></div>
     </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
-  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/scene.js"></script>
-  <script src="js/app.js"></script>
+  <!-- Toast Notification -->
+  <div id="toast-notification" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- External CDN Libraries (Pinned Versions — Graceful Offline Fallbacks Included) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+
+  <!-- Modular Application Scripts -->
+  <script src="js/data/portfolio-data.js" defer></script>
+  <script src="js/scenes/shader-library.js" defer></script>
+  <script src="js/scenes/hero-scene.js" defer></script>
+  <script src="js/scenes/project-scenes.js" defer></script>
+  <script src="js/components/audio-engine.js" defer></script>
+  <script src="js/components/projects-ui.js" defer></script>
+  <script src="js/components/skills-network.js" defer></script>
+  <script src="js/core/cursor-manager.js" defer></script>
+  <script src="js/core/navigation-manager.js" defer></script>
+  <script src="js/core/scroll-manager.js" defer></script>
+  <script src="js/core/animation-manager.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

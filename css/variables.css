@@ -1,0 +1,75 @@
+/* ==========================================================================
+   DESIGN TOKENS — PREMIUM MONOCHROME IDENTITY
+   Shushant Tiwari | Cinematic 3D Developer Portfolio
+   ========================================================================== */
+
+:root {
+  /* Core Palette — Strict Monochrome System */
+  --color-obsidian: #090A0C;
+  --color-graphite: #17191D;
+  --color-gunmetal: #292D33;
+  --color-steel: #777E87;
+  --color-silver: #C4C9D0;
+  --color-porcelain: #F2F3F4;
+
+  /* Semantic Surfaces & Borders */
+  --bg-primary: var(--color-obsidian);
+  --bg-elevated: var(--color-graphite);
+  --bg-surface: rgba(23, 25, 29, 0.78);
+  --bg-surface-strong: rgba(23, 25, 29, 0.94);
+  --border-subtle: rgba(196, 201, 208, 0.12);
+  --border-medium: rgba(196, 201, 208, 0.24);
+  --border-strong: rgba(242, 243, 244, 0.42);
+
+  /* Text Hierarchy (WCAG AA+ on #090A0C / #17191D) */
+  --text-primary: var(--color-porcelain);
+  --text-secondary: var(--color-silver);
+  --text-muted: #9BA2AC; /* Lightened slightly from Steel for AA readability on Graphite */
+  --text-steel: var(--color-steel);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Fluid Type Scale */
+  --text-xs: clamp(0.72rem, 0.7rem + 0.15vw, 0.8rem);
+  --text-sm: clamp(0.84rem, 0.82rem + 0.18vw, 0.94rem);
+  --text-base: clamp(0.96rem, 0.92rem + 0.22vw, 1.08rem);
+  --text-lg: clamp(1.12rem, 1.04rem + 0.42vw, 1.38rem);
+  --text-xl: clamp(1.4rem, 1.2rem + 0.9vw, 2rem);
+  --text-2xl: clamp(1.9rem, 1.45rem + 2vw, 3.25rem);
+  --text-3xl: clamp(2.5rem, 1.7rem + 3.8vw, 5.2rem);
+  --text-hero: clamp(3.1rem, 1.8rem + 7.2vw, 8.6rem);
+
+  /* Spacing System */
+  --space-2xs: 0.35rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1.25rem;
+  --space-md: 2rem;
+  --space-lg: 3.5rem;
+  --space-xl: 6rem;
+  --space-2xl: clamp(6rem, 10vw, 11rem);
+
+  /* Layout Constraints */
+  --container-max: 1380px;
+  --container-pad: clamp(1.25rem, 4vw, 3.5rem);
+  --nav-height: 76px;
+
+  /* Motion Curves & Durations */
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 220ms;
+  --dur-base: 420ms;
+  --dur-slow: 800ms;
+
+  /* Z-Index Layers */
+  --z-canvas: 0;
+  --z-content: 10;
+  --z-nav: 100;
+  --z-drawer: 200;
+  --z-modal: 300;
+  --z-preloader: 500;
+  --z-cursor: 900;
+}

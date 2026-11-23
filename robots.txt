@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shushant-556.github.io/Portfolio/sitemap.xml
