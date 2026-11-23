@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shushant Tiwari — AI Systems & Full-Stack Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-top">
+      <span>Shushant Tiwari</span>
+      <span id="preloader-pct">0%</span>
+    </div>
+    <div class="preloader-center">AI Systems & Engineering</div>
+    <div class="preloader-bar-wrap">
+      <div class="preloader-bar"></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-reticle"></div>
+
+  <!-- Interactive Three.js GLSL WebGL Backdrop -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <div class="site-wrapper">
+    <!-- Navigation -->
+    <header class="top-nav">
+      <div class="container nav-inner">
+        <a href="#top" class="brand" data-interactive="true">
+          <span class="brand-mark"></span>
+          <span>Shushant Tiwari</span>
+        </a>
+        <nav class="nav-links">
+          <a href="#work" data-interactive="true">Work</a>
+          <a href="#experience" data-interactive="true">Experience</a>
+          <a href="#skills" data-interactive="true">Skills</a>
+          <a href="#education" data-interactive="true">Education</a>
+          <a href="#contact" data-interactive="true">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="top" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title hero-stagger">
+            Engineering <span class="accent">AI Systems</span> & Full-Stack Software
+          </h1>
+          <p class="hero-lead hero-stagger">
+            Computer Science & Engineering undergraduate at IILM University in Greater Noida.
+            Building real-time audio AI pipelines, encrypted decentralized EHR architectures,
+            and production Python backends.
+          </p>
+
+          <div class="hero-metrics hero-stagger">
+            <div class="metric-block">
+              <div class="metric-value">9.30</div>
+              <div class="metric-label">B.Tech CSE CGPA</div>
+            </div>
+            <div class="metric-block">
+              <div class="metric-value">Grade O</div>
+              <div class="metric-label">AICTE DevOps Intern</div>
+            </div>
+            <div class="metric-block">
+              <div class="metric-value">8+</div>
+              <div class="metric-label">Verified Credentials</div>
+            </div>
+          </div>
+
+          <div class="action-row hero-stagger">
+            <a href="#work" class="btn btn-primary" data-interactive="true">Explore Selected Work</a>
+            <a href="https://github.com/Shushant-556" target="_blank" rel="noreferrer" class="btn btn-surface" data-interactive="true">GitHub</a>
+            <a href="https://linkedin.com/in/shushant-tiwari" target="_blank" rel="noreferrer" class="btn btn-surface" data-interactive="true">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kinetic Marquee -->
+    <div class="marquee-band" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Real-Time Audio AI</span>
+        <span>Python Backends</span>
+        <span>Encrypted EHR on IPFS</span>
+        <span>Machine Learning Pipelines</span>
+        <span>Docker & CI/CD</span>
+        <span>Oracle Cloud GenAI Pro</span>
+        <span>Real-Time Audio AI</span>
+        <span>Python Backends</span>
+        <span>Encrypted EHR on IPFS</span>
+        <span>Machine Learning Pipelines</span>
+        <span>Docker & CI/CD</span>
+        <span>Oracle Cloud GenAI Pro</span>
+      </div>
+    </div>
+
+    <!-- Selected Work -->
+    <section id="work" class="section">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <h2 class="section-title">Selected Work</h2>
+          <p class="section-note">Production systems across real-time AI, decentralized security, and predictive ML</p>
+        </div>
+        <div id="projects-list" class="projects-list"></div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <h2 class="section-title">Experience</h2>
+          <p class="section-note">Accredited industrial internships and campus leadership</p>
+        </div>
+        <div id="experience-list" class="two-col-stack"></div>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <h2 class="section-title">Technical Stack</h2>
+          <p class="section-note">Core languages, AI tooling, full-stack frameworks, and cloud systems</p>
+        </div>
+        <div id="skills-grid" class="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <h2 class="section-title">Education</h2>
+          <p class="section-note">Academic foundation in computer science and applied statistics</p>
+        </div>
+        <div id="education-list" class="two-col-stack"></div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <h2 class="section-title">Certifications</h2>
+          <p class="section-note">Verified industry credentials across cloud, AI, data science, and blockchain</p>
+        </div>
+        <div id="certs-grid" class="certs-grid"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-panel scroll-reveal">
+          <h2 class="contact-heading">Let's build reliable AI and backend systems</h2>
+          <p class="contact-copy">
+            Available for AI Engineering, LLM Systems, and Full-Stack Software roles.
+          </p>
+          <div class="contact-details">
+            <span>Greater Noida / Delhi NCR, India</span>
+            <span>+91 9798107584</span>
+            <span>shushanttiwari2036@gmail.com</span>
+          </div>
+          <div class="action-row">
+            <a href="mailto:shushanttiwari2036@gmail.com" class="btn btn-primary" data-interactive="true">Email Shushant</a>
+            <a href="https://linkedin.com/in/shushant-tiwari" target="_blank" rel="noreferrer" class="btn btn-surface" style="background-color: var(--bg-canvas);" data-interactive="true">LinkedIn</a>
+            <a href="https://github.com/Shushant-556" target="_blank" rel="noreferrer" class="btn btn-surface" style="background-color: var(--bg-canvas);" data-interactive="true">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container site-footer">
+      <span>Shushant Tiwari — Greater Noida, India</span>
+      <span>shushant-556.github.io/Portfolio</span>
+    </footer>
+  </div>
+
+  <!-- Case Study Drawer -->
+  <div id="drawer-backdrop" role="dialog" aria-modal="true">
+    <div class="drawer-content">
+      <div class="drawer-top">
+        <span class="font-mono" style="color: var(--accent-red-bright);">Case Study</span>
+        <button id="drawer-close" class="drawer-close" data-interactive="true">Close</button>
+      </div>
+      <div id="drawer-body"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
